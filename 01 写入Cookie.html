@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<mata http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<title></title>
+	<script type="text/javascript">
+		function doWrite(){
+			// var username=document.getElementById("username").value;
+			// var password=document.getElementById("password").value;
+			var username=encodeURIComponent(document.getElementById("username").value);
+			console.log(username);  //不能使用encodeURI。其不会对分号进行编码
+			var password=encodeURIComponent(document.getElementById("password").value);
+			var today=new Date();
+			var expiresDate=new Date(today.getFullYear(),today.getMonth(),today.getDate()+7);
+			var str1="username="+username+";expires="+expiresDate.toGMTString(); //toUTCString();
+			document.cookie=str1; //只有在网站下才能存储
+			var str2="password="+password;  //消除空格存储或越一位存储
+			document.cookie=str2;
+			var str3="age=23; expires="+expiresDate.toGMTString();
+			document.cookie=str3;
+			console.log("写入Cookie成功");
+		}
+	</script>
+</head>
+<body>
+	用户名: <input type="text" id="username"><br>
+	密码:  <input type="password" id="password"><br>
+	<input type="button" value="写入Cookie" onclick="doWrite()">
+</body>
+</html>

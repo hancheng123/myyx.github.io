@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<mata charset="utf-8"/>
+	<title></title>
+	<script type="text/javascript" src="jQuery/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="jQuery/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		function doAdd(){
+			$.cookie("username",$("#username").val());
+			$.cookie("password",$("#password").val(),{expires:7});
+		}
+		function doRead(){
+			// 读取指定名称的Cookie
+			console.log($.cookie("username"));
+			// 遍历读取所有Cookie
+			var cookies=$.cookie();
+			console.log(cookies);
+			$.each(cookies,function(name,value){
+				console.log(name+"="+value);
+			});
+		}
+		function doDelete(){
+			$.removeCookie("username");
+		}
+	</script>
+</head>
+<body>
+	用户名: <input type="text"  id="username"><br>
+	密码: <input type="text" id="password">
+	<input type="button" value="添加Cookie" onclick="doAdd()">
+	<input type="button" value="读取Cookie" onclick="doRead()">
+	<input type="button" value="删除Cookie" onclick="doDelete()">
+</body>
+</html>

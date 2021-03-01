@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+	.error{
+			font-size:12px;
+			color: red;
+			margin 
+		}
+	.ok{
+			font-size:12px;
+			color: green;
+		}
+</style>
+<script type="text/javascript" src="javascript/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="javascript/post.js"></script>
+<title>注册</title>
+</head>
+
+<body>
+	<h1 >用户注册</h1>
+	<form action="study.html" onsubmit="return checkSubmit()">
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td> 
+				<input type="text" id="username" onBlur="checkUserName()">
+				<span id="usernameInfo"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td>
+				<input type="password" id="password" onBlur="checkPassWord()">
+				<span id="passwordInfo"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td>
+				<input type="password" id="repassword" onBlur="checkRepassWord()">
+				<span id="repasswordInfo"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>籍贯：</td>
+			<td>
+				<select  id="province" onchange="changeCity()">
+					<option value="0">--选择省份--</option>
+				</select>
+				<select id="city" onchange="changeCounty()">
+					<option value="0">--选择城市--</option>
+				</select>
+				<select  id="county">
+					<option value="0">--选择地区--</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>手机号码：</td>
+			<td>
+				<input type="text" id="phone" onBlur="checkPhone()">
+				<span id="phoneInfo"></span>			
+			</td>
+		</tr>
+		<tr>
+			<td>身份证：</td>
+			<td>
+				<input type="text" id="identity" onBlur="checkIdentity()">
+				<span id="identityInfo"></span>			
+			</td>
+		</tr>
+		<tr>
+			<td>邮箱：</td>
+			<td>
+				<input type="text" id="email" onBlur="checkEmail()">
+				<span id="emailInfo"></span>			
+			</td>
+		</tr>
+		<tr>
+			<td colSpan="2">
+			<input type="submit" value="注册">
+			<input type="reset">
+			</td>
+		</tr>
+	</table>
+	
+	</form>
+</body>
+</html>

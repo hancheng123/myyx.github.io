@@ -1,0 +1,252 @@
+@charset "utf-8";
+.mk_js{
+	width: 1180px;
+	height: 1000px;
+	margin:10px auto;
+	padding: 0px 0;
+	text-align: left;
+	position: relative;
+	border: 1px solid rgba(152,149,149,1.00);
+}
+.mk_js_world{
+	width:760px;
+	padding: 29px 29px 0;
+	float: left;
+	position: relative;
+	
+}
+.mk_js_world h1{
+	margin: 0 10px 0 0;
+	display: inline;
+	font-size: 34px;
+	line-height: 1.15;
+	font-weight: 400;
+	vertical-align: sub;
+}
+.mk_js_world h2{
+	margin: 0 10px 0 -10px;
+	display: inline;
+	font-size: 20px;
+	font-weight: 400;
+	vertical-align: sub; 
+}
+.mk_js_world_bt{
+	margin: 0 0 5px;
+	
+}
+.mk_js_world_nr{
+	font-size:14px;
+	word-wrap: break-word;
+	color: #333;
+	margin-bottom: 15px;
+	text-indent: 2em;
+	line-height: 24px;
+	zoom:1;
+	
+}
+.mk_js_world_nr a{color: #136EC2;
+	text-decoration: none;
+	
+}
+.mk_js_world_sjb{white-space: normal;
+	position: relative;
+	top: -0.5em;
+	line-height: 0;
+	font-size: 75%;
+	vertical-align: baseline;
+}
+.sup-anchor{
+	position: relative;
+	top: -50px;
+	font-size: 0px;
+	line-height: 0;
+}
+.mk_js_world_nr1{
+	width:440px;
+	float: left;
+	padding:0px;
+	margin: 0px;
+	line-height: 26px;
+	
+}
+.basicinfo-item-name{
+	width: 90px;
+	padding: 0px 5px 0px 12px;
+	font-weight: 700;
+	overflow: hidden;
+	color: #999;
+	float: left;
+
+} 
+.basicinfo-item-name1{
+	width: 90px;
+	padding: 4px 5px 0px 12px;
+	font-weight: 700;
+	overflow: hidden;
+	color: #999;
+	float: left;
+
+} 
+.basicinfo-item-value{
+	zoom:1;
+	color: #333;
+	width: 335px;
+	position: relative;
+	word-break: break-all;
+	margin-left: 107px;			
+}
+.mk_js_world_sum{
+	margin: 10px 0 35px;
+	clear: both;
+	width: 760px;
+	height: 550px;
+	background-image: url(https://bkssl.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_ccaff81.png);	
+}
+.basicinfo-picture{
+	width: 320px;
+	float: left;
+	position: relative;
+	
+}
+.basicinfo-picture img{
+	width: 320px;
+	height: 400px;
+	float: left;
+	
+}
+.web-player{
+	clear: both;
+	line-height: 26px;
+	position: relative;
+	top: 16px;
+	
+}
+.basicinfo-item-value1{
+	zoom:1;
+	color: #333;
+	width:205px;
+	position: relative;
+	word-break: break-all;
+	margin-left: 110px;
+	line-height: 26px
+		
+}
+.toggle-toexpand{position:absolute;
+	right: 0px;
+	bottom: 0px;
+	display:block;
+	z-index: 1;
+	width: 40px;
+	color: #999;
+	text-align: right;	
+}
+.toggle-toexpand label{
+	cursor: pointer;
+}
+.toggle-tocollapse{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width:40px;
+	z-index: 1;
+	color: #999;
+	text-align: right;
+	
+/*	display: block;*/
+}
+.toggle-tocollapse label{
+	cursor:pointer;
+}
+.arrow{
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 4px solid #b4b4b4;
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	display: block;
+	height: -2px;
+}
+.arrow-bg{
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 4px solid #fff;
+	position: absolute;
+	left: 0px;
+	top: 11px;
+	
+}
+.arrow-back{
+	position: absolute;
+	border-bottom: 5px solid #4b4b4b;
+	border-left: 5px  solid transparent;
+	border-right: 5px solid transparent;
+	left: 0px;
+	top: 11px;
+}
+.arrow-back-bg{position: absolute;
+	border-bottom: 5px solid #fff;
+	border-left: 5px  solid transparent;
+	border-right: 5px solid transparent;
+	left: 0px;
+	top: 12px;
+}
+.web-all-player{
+	
+	float: none;
+	position: absolute;
+	background: #fff;
+	padding:0 4px 0 2px;
+	top:415px;
+	left:0px;
+	
+	/*border:1px solid #4d4d4d;
+	box-shadow:0px 1px 5px #ddd;*/
+	z-index: 1;
+	display:none;
+	}
+.all-player-block{
+	background-image: url(https://bkssl.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_ccaff81.png);
+	width: 320px;
+	display: block;
+	border:1px solid #d4d4d4;
+	box-shadow:0px 1px 5px #ddd;
+	position: relative;
+	top:-15px
+	
+}
+ #img-wrap{
+            width:350px;
+            height:200px;
+            position: relative;
+            overflow: hidden;
+	 left: 10px
+        }
+        #img-wrap img{
+            width:350px;
+            height:200px;
+            float:right;
+            position:absolute;
+            top:0;
+            left:0;
+            /*opacity: 0;*/
+            
+			-webkit-box-shadow: 1px 1px 3px #090909;
+	box-shadow: 1px 1px 3px #090909;
+	border-radius: 8px;	
+        }
+#img-wrap:hover{-webkit-box-shadow: 2px 2px 19px #6E6A6A;
+	box-shadow: 2px 2px 19px #6E6A6A;
+	cursor: pointer;}
+.inputs{margin-left: 230px;
+	margin-top: 170px;
+	position: absolute;
+	
+}
+.inputs input{
+	display:block;
+	float: left;
+	margin-left:10px;
+	cursor: pointer;
+}	
+       

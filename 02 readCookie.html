@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<mata charset="UTF-8"/>
+	<title></title>
+	<script type="text/javascript">
+		function doReadAll(){
+			var str=document.cookie;
+			//console.log(str);
+			var array=str.split(";");
+			for(var i=0;i<array.length;i++){
+				console.log(array);
+				var array2=array[i].split("=");
+				console.log(array2[0]+":"+decodeURIComponent(array2[1])); //解码
+			}
+		}
+
+		//username=tom; password=abc; age=23
+		function doRead(key){//password
+			//读取所有Cookie
+			var str=document.cookie;
+			//获取key第一次出现的位置
+			var index=str.indexOf(key+"="); //追踪到等于号，避免搜索到相似的key
+			//获取截取的起始位置
+			var start=index+key.length+1; //从等号后面开始截取
+			//获取截取的结束位置
+			var end=str.indexOf(";",start);//从起始位置开始截取到分号
+			//截取value
+			if(end==-1){//如果找不到分号，返回-1，说明是最后一个cookie
+				var value=decodeURIComponent(str.substring(start));//subString不支持负数，从起始位置开始截取到最后
+			}else{
+
+				var value=decodeURIComponent(str.substring(start,end));//不包括分号
+			}
+			console.log(key+":"+value)
+		}
+	</script>
+</head>
+<body>
+<input type="button" value="获取所有cookie" onclick="doReadAll()">
+<input type="button" value="读取Cookie中的password" onclick="doRead('password')">
+<input type="button" value="读取Cookie中的age" onclick="doRead('age')">
+<input type="button" value="读取Cookie中的username" onclick="doRead('username')">
+</body>
+</html>

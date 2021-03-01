@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/vue.js"></script>
+	<script scr="js/vue-resource.min.js"></script>
+
+	<script>
+		window.onload=function(){
+			new Vue({
+				el:"#itany",
+				data:{
+					keyword:"",
+					myData:[]
+				},
+				methods:{
+					getData(){
+						this.$http.jsonp("https://www.baidu.com/sugrec",{
+							params:{
+								wd:this.keyword
+							},
+							jsonp:"cb"
+						}).then(resp=>{
+							this.myData=resp.data.s;
+						});
+					}
+				}
+			});
+
+		};
+	</script>
+</head>
+<body>
+	<div id="itany">
+		<input type="text" v-model="keyword" @keyup="getData()">
+		<ul>
+			<li v-for="(value,index) in myData">
+				{{value}}
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
